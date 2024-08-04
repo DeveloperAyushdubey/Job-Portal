@@ -1,0 +1,80 @@
+﻿@model Mvc_Projetc.Models.Applicationform
+
+@{
+    ViewBag.Title = "create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Form Fill</h1>
+                </div>
+                @using (Html.BeginForm("create", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                <div class="card-body">
+                    <div class="row form-group">
+                        <div class="col-md-6 ">
+                            @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label" })
+                         
+                                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                            
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label " })
+                           
+                                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                           
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.education, htmlAttributes: new { @class = "control-label" })
+                           
+                                @Html.EditorFor(model => model.education, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.education, "", new { @class = "text-danger" })
+                        
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.Experience, htmlAttributes: new { @class = "control-label " })
+                         
+                                @Html.EditorFor(model => model.Experience, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Experience, "", new { @class = "text-danger" })
+                     
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.resume, htmlAttributes: new { @class = "control-label" })
+                              
+                                  <input type="file" name="file" class="form-control" />
+                                    @Html.ValidationMessageFor(model => model.resume, "", new { @class = "text-danger" })
+                              
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.jid, htmlAttributes: new { @class = "control-label" })
+
+                            @Html.DropDownList("jid", (SelectList)ViewBag.data, "--Select Job--", new { @class = "form-control" })
+
+
+                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Create" class="btn btn-default" />
+
+                    </div>
+            </div>}
+                </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+

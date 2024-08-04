@@ -1,0 +1,66 @@
+﻿@model Mvc_Projetc.Models.Jobs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <div class="card p-2 bg-light">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>@Model.Title</h1>
+                            <h5>Company Name : @Model.companyname</h5>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">Skills:  @Model.skills </div>
+                        <div class="col-md-6">Duration :  @Model.duration</div>
+                        <div class="col-md-12 mt-5 gap-2">
+                           
+                  <a class="btn btn-primary" @Html.ActionLink("Apply","create","Home")
+                        <button class="btn btn-outline-primary">Save</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <h5 >About the job</h5>
+                        <p>Job position : @Model.position </p>
+                        <p>Ctc : @Model.ctc</p>
+                        <p>Experience : @Model.Experience</p>
+                        <p>Location : @Model.location</p>
+                        <p>skills : @Model.skills</p>
+                        <p>Ctc : @Model.ctc</p>
+                        <p>Qulification : @Model.qulification</p>
+                        <p>Location : @Model.location</p>
+                        <p>Country : @Model.country</p>
+                        <p>State : @Model.state</p>
+                        <p>City : @Model.city</p>
+                        <p>Duration : @Model.duration</p>
+                        <p>Responsibilities : @Model.responsibilities</p>
+                       <p>Description : @Model.Description</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+  
+
+
+
+
+
+
+
+

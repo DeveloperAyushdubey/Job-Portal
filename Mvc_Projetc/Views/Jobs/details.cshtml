@@ -1,0 +1,157 @@
+﻿@model Mvc_Projetc.Models.Jobs
+
+@{
+    ViewBag.Title = "details";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 mt-5">
+            @Html.Partial("_Sidebar")
+        </div>
+        <div class="col-md-9 mt-5">
+            <h2>details</h2>
+
+            <div>
+                <h4>Jobs</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Title)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Description)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.companyname)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.companyname)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.city)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.city)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.country)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.country)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.state)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.state)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.skills)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.skills)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.duration)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.duration)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Experience)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Experience)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.qulification)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.qulification)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.location)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.location)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ctc)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ctc)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.position)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.position)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.education)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.education)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.responsibilities)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.responsibilities)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.sid)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.sid)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+
+        </div>
+    </div>
+</div>

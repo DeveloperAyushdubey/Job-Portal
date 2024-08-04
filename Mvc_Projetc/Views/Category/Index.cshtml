@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Mvc_Projetc.Models.Category>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            @Html.Partial("_Sidebar")
+        </div>
+        <div class="col-md-9">
+            @{
+                ViewBag.Title = "Category Index";
+                }
+
+            <h2>Category Index</h2>
+ 
+  @using (Html.BeginForm("Index", "Category", FormMethod.Get))
+            {
+                <div class="row">
+                    <div class="col-md-6">
+                    <a  class="btn btn-primary"    @Html.ActionLink("Create","create","Category")
+                    </div>
+                    <div class="col-md-6 float-right">
+                        <input type="search" name="search" class="form-control" placeholder="Serach" />
+                       
+                    </div>
+                </div>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.status)
+                    </th>
+                    <th></th>
+                </tr>
+
+               @if (Model.Any())
+               {
+
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.status)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-success" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }}
+           else
+                {
+                    <tr>
+                        <td><h5 class="text-center">Data is not Found</h5> </td>
+                    </tr>
+                }
+
+            </table>
+            }
+        </div>
+    </div>
+</div>
